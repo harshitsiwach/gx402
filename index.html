@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GX402: Universal Gaming Payment SDK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in-section {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #050505;
+        color: #e0e0e0;
+      }
+      .glow-text {
+        text-shadow: 0 0 8px rgba(0, 190, 255, 0.6), 0 0 16px rgba(0, 190, 255, 0.4);
+      }
+      .section-bg {
+        background-color: #111111;
+      }
+      .card-glow-border {
+        position: relative;
+        border: 1px solid #222;
+        transition: border-color 0.3s ease;
+      }
+      .card-glow-border:hover {
+        border-color: #00aaff;
+      }
+      .card-glow-border::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: conic-gradient(from 180deg at 50% 50%, rgba(0, 190, 255, 0.4) 0deg, rgba(0, 190, 255, 0) 360deg);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .card-glow-border:hover::before {
+        opacity: 1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.548.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
